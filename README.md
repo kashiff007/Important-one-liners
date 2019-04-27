@@ -18,6 +18,7 @@ cut -f1-2 sample.fa.fai
 **Sum/average a column awk**
 ```
 awk -F',' '{sum+=$57;} END{print sum;}' file.txt
+awk '{ sum += $2 } END { if (NR > 0) print sum / NR }' file.txt
 ```
 ## R dataframe column/row selection 
 
