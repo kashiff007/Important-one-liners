@@ -1,25 +1,24 @@
 # Important-one-liners
-Important one liners
 
 **Perl one liner to extract sequences by their ID from a FASTA file**
-
+'''
 perl -ne 'if(/^>(\S+)/){$c=$i{$1}}$c?print:chomp;$i{$_}=1 if @ARGV' ids.file fasta.file
 perl -ne 'if(/^>(\S+)/){$c=grep{/^$1$/}qw(id1 id2)}print if $c' fasta.file
-
+'''
 **SAM to sorted BAM**
 
 samtools view -u N22.sam | samtools sort -o N22.bam
 
 **Get Multi Fasta Length**
-
+'''
 samtools faidx sample.fa
 
 cut -f1-2 sample.fa.fai
-
+'''
 **Sum/average a column awk**
-
+'''
 awk -F',' '{sum+=$57;} END{print sum;}' file.txt
-
+'''
 # R dataframe column/row selection 
 
 **All Rows and All Columns**
