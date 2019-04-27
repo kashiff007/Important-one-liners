@@ -22,7 +22,7 @@ awk '{ sum += $2 } END { if (NR > 0) print sum / NR }' file.txt
 ```
 ## R dataframe column/row selection 
 
-|    Slection                                    |    Commands  |
+|    Selections                                  |    Commands  |
 |------------------------------------------------|-------------:|
 |All Rows and All Columns                        |df[,]         |
 |First row and all columns                       |df[1,]        |
