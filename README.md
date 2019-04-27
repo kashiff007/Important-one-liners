@@ -22,34 +22,13 @@ awk '{ sum += $2 } END { if (NR > 0) print sum / NR }' file.txt
 ```
 ## R dataframe column/row selection 
 
--All Rows and All Columns
-
-df[,]
-
--First row and all columns
-
-df[1,]
-
--First two rows and all columns
-
-df[1:2,]
-
--First and third row and all columns
-
-df[ c(1,3), ]
-
--First Row and 2nd and third column
-
-df[1, 2:3]
-
--First, Second Row and Second and Third COlumn
-
-df[1:2, 2:3]
-
--Just First Column with All rows
-
-df[, 1]
-
--First and Third Column with All rows-
-
-df[,c(1,3)]
+|Slection                                        | Commands     |
+|................................................|.............:|
+|All Rows and All Columns                        |df[,]         |
+|First row and all columns                       |df[1,]        |
+|First two rows and all columns                  |df[1:2,]      |
+|First and third row and all columns             |df[ c(1,3), ] |
+|First Row and 2nd and third column              |df[1, 2:3]    |
+|First, Second Row and second and third column   |df[1:2, 2:3]  |
+|Just First Column with All rows                 |df[, 1]       |
+|First and Third Column with All rows-           |df[,c(1,3)]   |
