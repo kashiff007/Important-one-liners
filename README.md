@@ -25,24 +25,31 @@ awk -F',' '{sum+=$57;} END{print sum;}' file.txt
 **All Rows and All Columns**
 
 df[,]
+
 **First row and all columns**
 
 df[1,]
+
 **First two rows and all columns**
 
 df[1:2,]
+
 **First and third row and all columns**
 
 df[ c(1,3), ]
+
 **First Row and 2nd and third column**
 
 df[1, 2:3]
+
 **First, Second Row and Second and Third COlumn**
 
 df[1:2, 2:3]
+
 **Just First Column with All rows**
 
 df[, 1]
+
 **First and Third Column with All rows**
 
 df[,c(1,3)]
