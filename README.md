@@ -11,7 +11,7 @@ samtools view -u N22.sam | samtools sort -o N22.bam
 
 **CpG location on the genome**
 ```
-grep -v "^>" ../Aiptasia_Genome/New_genome/aiptasia_genome_final.fa  | tr -d "\n" | tr -c "[GCgc]" "\n" | grep -v '^$' | grep -o -i 'CG' | wc -l
+grep -v "^>" genome.fa  | tr -d "\n" | tr -c "[GCgc]" "\n" | grep -v '^$' | grep -o -i 'CG' | wc -l
 ```
 
 **Get Multi Fasta Length**
