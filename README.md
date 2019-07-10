@@ -13,7 +13,10 @@ samtools view -u N22.sam | samtools sort -o N22.bam
 ```
 grep -v "^>" genome.fa  | tr -d "\n" | tr -c "[GCgc]" "\n" | grep -v '^$' | grep -o -i 'CG' | wc -l
 ```
-
+**Extract all lines from a file which is present al list in gene.list**
+```
+grep -Fw -f gene.list Tair10_GFF3_genes.gff
+```
 **Get Multi Fasta Length**
 ```
 samtools faidx sample.fa
