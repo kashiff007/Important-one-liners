@@ -6,9 +6,9 @@ perl -ne 'if(/^>(\S+)/){$c=$i{$1}}$c?print:chomp;$i{$_}=1 if @ARGV' ids.file fas
 perl -ne 'if(/^>(\S+)/){$c=grep{/^$1$/}qw(id1 id2)}print if $c' fasta.file
 ```
 **SAM to sorted BAM**
-
-samtools view -u N22.sam | samtools sort -o N22.bam
-
+```
+samtools view -@ 40 -u Wheat_E1_t1S_S8.sam | samtools sort -@ 40 -o Wheat_E1_t1S_S8.bam 
+```
 **CpG location on the genome**
 ```
 grep -v "^>" genome.fa  | tr -d "\n" | tr -c "[GCgc]" "\n" | grep -v '^$' | grep -o -i 'CG' | wc -l
