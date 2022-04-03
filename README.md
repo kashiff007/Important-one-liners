@@ -1,5 +1,17 @@
 # Important-one-liners
 
+**Download all reads from a NCBI project.**
+```
+module load sratoolkit edirect
+esearch -db sra -query PRJNA40075  | efetch --format runinfo | cut -d ',' -f 1 | grep SRR | xargs fastq-dump --split-files
+```
+Or use prefetch for individual SRR* file
+```
+prefetch -v SRR5956435
+fastq-dump --split-files SRR5956435
+```
+NCBI documents for downloading data: https://www.ncbi.nlm.nih.gov/books/NBK179288/
+
 **Perl one liner to extract sequences by their ID from a FASTA file**
 ```
 perl -ne 'if(/^>(\S+)/){$c=$i{$1}}$c?print:chomp;$i{$_}=1 if @ARGV' ids.file fasta.file
